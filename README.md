@@ -78,7 +78,7 @@ As Funcionalidades devem realizar operações de CRUD (Create, Read, Update, Del
 2. Consuma a API de catalogo de de produtos
    
 ``` html
-    https://catalogofake.com/api/catalogo/{ean}: obtem os dados do produto relacionados ao codigo de barras informado.
+    https://catalogofake.com/api/catalogo/{ean}: obtem os dados do produto relacionados.
 ```
 
 ## Critérios de Avaliação
