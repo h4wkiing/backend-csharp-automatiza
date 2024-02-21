@@ -29,7 +29,8 @@ As Funcionalidades devem realizar operações de CRUD (Create, Read, Update, Del
 
 ## Cadastro de marcas
 
-1. A "Marca" deve conter os seguintes atributos: [Id (Chave), Descrição,Status, Data de Criação]. Os endpoints esperados são:
+1. A "Marca" deve conter os seguintes atributos:  Marca(Id (Chave), Descrição,Status).
+2. Os endpoints esperados são:
    
 ``` html
    POST /api/marcas: cadastrar uma nova marca.
@@ -39,12 +40,13 @@ As Funcionalidades devem realizar operações de CRUD (Create, Read, Update, Del
    DELETE /api/marcas/{id}: Remove uma marca do sistema. Obs: O Registro da marca não deve ser removido do banco de dados, o Status deve ser alterado para 'REMOVIDO').
 ```
 
-2. Implemente uma regra de validação para o atributo "Descrição". A descrição deve conter mais de 3 e menos 100 caracteres, o sistema deve retornar uma mensagem de erro apropriada em caso de tentativa de criação ou atualização de um produto com descrição inválida.
+3. Implemente uma regra de validação para o atributo "Descrição". A descrição deve conter mais de 3 e menos 100 caracteres, o sistema deve retornar uma mensagem de erro apropriada em caso de tentativa de criação ou atualização de um produto com descrição inválida.
 
-
+4. O registro da marca não deve ser removido do banco de dados, o Status deve ser alterado para 'REMOVIDO'.
+ 
 ## Cadastro de Produtos
 
-1. O "Produto" deve conter os seguintes atributos: [Id (Chave), Descrição, Preço de Venda, Marca , Estoque, Status e Data de Criação].
+1. O "Produto" deve conter os seguintes atributos: Produto (Id, Descrição, Preço de Venda, MarcaId , Estoque, Status).
 2. Os endpoints esperados são:
 
 ``` html
@@ -52,7 +54,7 @@ As Funcionalidades devem realizar operações de CRUD (Create, Read, Update, Del
    GET /api/produtos: listar todos os produtos.
    GET /api/produtos/{id}: Retorna os detalhes de um produto específico pelo id.
    PUT /api/produtos/{id}: Atualiza os dados de um produto existente.
-   DELETE /api/produtos/{id}: Remove um produto do sistema. Obs: O Registro do produto não deve ser removido do banco de dados, o Status deve ser alterado para 'REMOVIDO').
+   DELETE /api/produtos/{id}: Remove um produto do sistema. Obs: O).
 ```
 
 3. Implemente uma regra de validação para o atributo "Descrição" do produto. A descrição deve conter mais de 3 e menos 300 caracteres, o sistema deve retornar uma mensagem de erro apropriada em caso de tentativa de criação ou atualização de um produto com descrição inválida.
@@ -61,16 +63,22 @@ As Funcionalidades devem realizar operações de CRUD (Create, Read, Update, Del
 
 4. Implemente uma regra de validação para o atributo "Estoque" do produto. O estoque não pode ser negativo, e o sistema deve retornar uma mensagem de erro apropriada em caso de tentativa de criação ou atualização de um produto com estoque inválido.
 
-5. Adicione um campo calculado ao produto chamado "ValorTotalEstoque " que represente o valor total do produto em estoque (Preço x Quantidade em Estoque). Esse campo deve ser retornado na consulta de detalhes do produto.
+5. Adicione um campo calculado ao produto chamado "ValorTotalEstoque " que represente o valor total do produto em estoque (Preço de venda x Quantidade em Estoque). Esse campo deve ser retornado na consulta de detalhes do produto.
+ 
+6. O registro do produto não deve ser removido do banco de dados, o Status deve ser alterado para 'REMOVIDO'.
    
-# Consulta do produto no banco de imagens
+## Consulta das imagens produto no banco de imagens
 
+1. Implemente um endpint no recurso "catalogo" para obter as imagens do produto em uma api de banco de imagens consultando pelo codigo de barras.
+   
 ``` html
-   POST /api/produtos: cadastrar um novo produto.
-   GET /api/produtos: listar todos os produtos.
-   GET /api/produtos/{id}: Retorna os detalhes de um produto específico pelo id.
-   PUT /api/produtos/{id}: Atualiza os dados de um produto existente.
-   DELETE /api/produtos/{id}: Remove um produto do sistema.
+   GET /api/catalogo/{ean}/imagens: obtem as imagens do produto relacionados ao codigo de barras informado.
+```
+
+2. Consuma a API de catalogo de de produtos
+   
+``` html
+    https://catalogofake.com/api/catalogo/{ean}: obtem os dados do produto relacionados ao codigo de barras informado.
 ```
 
 ## Critérios de Avaliação
@@ -90,10 +98,10 @@ As Funcionalidades devem realizar operações de CRUD (Create, Read, Update, Del
 - Padrões de Projeto
 - Princípios do SOLID
   
-# Material de referencia
+# Material de referência.
 
 Tutorial: criar uma API Web com o ASP.NET Core
 https://learn.microsoft.com/pt-br/aspnet/core/tutorials/first-web-api?view=aspnetcore-7.0&tabs=visual-studio
 
 
-Bom teste e sucesso no desafio! Em caso de dúvidas, entre em contato pelo e-mail fabricio@automatizasitemas.com.br.
+Bom teste e sucesso no desafio! Em caso de dúvidas, entre em contato pelo Discord.
