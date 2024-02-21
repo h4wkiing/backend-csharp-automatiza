@@ -37,7 +37,7 @@ As Funcionalidades devem realizar operações de CRUD (Create, Read, Update, Del
    GET /api/marcas: listar todas as marcas.
    GET /api/marcas/{id}: Retorna os detalhes de uma marca específica pelo id.
    PUT /api/marcas/{id}: Atualiza os dados de uma marca existente.
-   DELETE /api/marcas/{id}: Remove uma marca do sistema. Obs: O Registro da marca não deve ser removido do banco de dados, o Status deve ser alterado para 'REMOVIDO').
+   DELETE /api/marcas/{id}: Remove uma marca do sistema.
 ```
 
 3. Implemente uma regra de validação para o atributo "Descrição". A descrição deve conter mais de 3 e menos 100 caracteres, o sistema deve retornar uma mensagem de erro apropriada em caso de tentativa de criação ou atualização de um produto com descrição inválida.
@@ -54,7 +54,7 @@ As Funcionalidades devem realizar operações de CRUD (Create, Read, Update, Del
    GET /api/produtos: listar todos os produtos.
    GET /api/produtos/{id}: Retorna os detalhes de um produto específico pelo id.
    PUT /api/produtos/{id}: Atualiza os dados de um produto existente.
-   DELETE /api/produtos/{id}: Remove um produto do sistema. Obs: O).
+   DELETE /api/produtos/{id}: Remove um produto do sistema.
 ```
 
 3. Implemente uma regra de validação para o atributo "Descrição" do produto. A descrição deve conter mais de 3 e menos 300 caracteres, o sistema deve retornar uma mensagem de erro apropriada em caso de tentativa de criação ou atualização de um produto com descrição inválida.
