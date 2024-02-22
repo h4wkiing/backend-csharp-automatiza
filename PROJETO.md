@@ -45,22 +45,22 @@ As Funcionalidades devem realizar operações de CRUD (Create, Read, Update, Del
 6. O registro do produto não deve ser removido do banco de dados, o Status deve ser alterado para 'REMOVIDO'.
 
 
-
 ## Consulta das imagens produto no banco de imagens
 
-1. Implemente um endpoint no recurso "catalogo" para obter as imagens do produto em uma api de banco de imagens consultando pelo codigo de barras.
+1. Implemente um endpoint "catalogo" para obter as imagens do produto em uma api externa para consulta no banco de imagens consultando pelo codigo de barras.
+2. Endpoint esperado:
    
 ``` html
-   GET /api/catalogo/{ean}/imagens: obtem as imagens do produto relacionados ao codigo de barras informado.
+   GET /api/catalogo/{ean}/imagens: obtem as imagens do produto relacionados ao codigo de barras no banco de imagens.
 ```
 
-2. Consuma a API de catalogo de produtos
-   
+3. Consuma a API de catalogo de produtos 
+
 ``` html
-    https://catalogoautomatiza.azurewebsites.net/api/produtos/{ean} : obtem os dados do produto relacionados.
+   https://catalogoautomatiza.azurewebsites.net/api/produtos/7896007549627
 ```
 
-Produtos de exemplo cadastrado na base de dados
+Produtos de exemplo cadastrado na base de dados:
 
 ```
 Protetor Solar Nivea Sun Toque Seco FPS70 + Creme Facial Antissinais
