@@ -4,7 +4,7 @@ As Funcionalidades devem realizar operações de CRUD (Create, Read, Update, Del
 
 ## Funcionalidades
 
-## Cadastro de marcas
+## Cadastro de Marcas
 
 1. A "Marca" deve conter os seguintes atributos:  Marca(Id, Descrição,Status).
 2. Os endpoints esperados são:
@@ -47,14 +47,14 @@ As Funcionalidades devem realizar operações de CRUD (Create, Read, Update, Del
 
 ## Consulta das imagens produto no banco de imagens
 
-1. Implemente um endpoint "catalogo" para obter as imagens do produto em uma api externa para consulta no banco de imagens consultando pelo codigo de barras.
+1. Implemente um endpoint para obter as imagens do produto em uma api externa  que consulta o codigo de barras em um banco de imagens.
 2. Endpoint esperado:
    
 ``` html
    GET /api/catalogo/{ean}/imagens: obtem as imagens do produto relacionados ao codigo de barras no banco de imagens.
 ```
 
-3. Consuma a API de catalogo de produtos 
+3. Consuma a API de catalogo de produtos e retorne somente os links das imagens.
 
 ``` html
    https://catalogoautomatiza.azurewebsites.net/api/produtos/7896007549627
