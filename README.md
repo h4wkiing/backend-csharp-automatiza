@@ -17,7 +17,7 @@ Certifique-se de seguir as instruções detalhadamente e boa sorte!
 
 ## Observações
 
-- O candidato tem liberdade para escolher a estrutura do projeto, frameworks e bibliotecas adicionais que julgar adequados para a realização da prova.
+- O candidato tem liberdade para escolher a estrutura do projeto e bibliotecas adicionais que julgar adequados para a realização do teste.
 - É importante seguir as boas práticas de desenvolvimento e manter um código limpo e legível.
 - Inclua no arquivo explicativo em Markdown informações sobre como executar o projeto, incluindo a configuração dos bancos de dados.
 
