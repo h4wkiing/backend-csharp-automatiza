@@ -1,6 +1,6 @@
 ## Descrição do Projeto
 
-As Funcionalidades devem realizar operações de CRUD (Create, Read, Update, Delete) completo para os recursos "Produto" e "Marca". 
+A API deve realizar operações de CRUD (Create, Read, Update, Delete) completo para os recursos "Produto" e "Marca". E realizar o consumo de uma api externa para consulta das imagens por código de barras.
 
 ## Funcionalidades
 
